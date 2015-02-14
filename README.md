@@ -7,7 +7,7 @@ A plugin for diabetes-related plugins for lita
 Add lita-diabetes to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-diabetes"
+gem "lita-diabetes", :git => "https://github.com/dosman711/lita-diabetes.git"
 ```
 
 ## Configuration
