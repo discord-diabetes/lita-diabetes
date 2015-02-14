@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name          = "lita-diabetes"
   spec.version       = "0.0.1"
   spec.authors       = ["Chris Baker"]
-  spec.email         = ["chris.baker@inin.com"]
+  spec.email         = ["dosman711@gmail.com"]
   spec.description   = %q{TODO: Add a description}
   spec.summary       = %q{TODO: Add a summary}
   spec.homepage      = "TODO: Add a homepage"
