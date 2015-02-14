@@ -4,10 +4,10 @@ A plugin for diabetes-related plugins for lita
 
 ## Installation
 
-Add lita-diabetes-handler to your Lita instance's Gemfile:
+Add lita-diabetes to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-diabetes-handler"
+gem "lita-diabetes"
 ```
 
 ## Configuration
