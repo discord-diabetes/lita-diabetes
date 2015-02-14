@@ -1,6 +1,6 @@
-# lita-diabetes-handler
+# lita-diabetes
 
-TODO: Add a description of the plugin.
+A plugin for diabetes-related plugins for lita
 
 ## Installation
 
@@ -12,11 +12,12 @@ gem "lita-diabetes-handler"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
-
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+<number> - Convert glucose between mass/molar concentration units.
+_<number>_ - Convert glucose between mass/molar concentration units inline. E.g "I started at _125_ today"
+Lita: estimate a1c [from average] <glucose level> - Estimates A1C based on average BG level
+Lita: estimate average [from a1c] <A1C> - Estimates average blood glucose
 
 ## License
 
