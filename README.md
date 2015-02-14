@@ -1,8 +1,11 @@
 # lita-diabetes
 
+[![Build Status](https://travis-ci.org/dosman711/lita-diabetes.svg)](https://travis-ci.org/dosman711/lita-diabetes)
+
 A plugin for diabetes-related plugins for lita
 
 ## Installation
+
 
 Add lita-diabetes to your Lita instance's Gemfile:
 
