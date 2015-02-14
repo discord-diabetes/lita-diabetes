@@ -1,3 +1,4 @@
+# vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab:
 module Lita
     module Handlers
         class Diabetes < Handler
@@ -6,7 +7,7 @@ module Lita
             route(/(?:^|_)(\d{1,3}|\d{1,2}\.\d+)(?:$|_)/, :convert, command: false, help:{
                 '<number>' => 'Convert glucose between mass/molar concentration units.',
                 '_<number>_' => 'Convert glucose between mass/molar concentration units inline. E.g "I started at _125_ today"'
-                })
+            })
 
             route(/estimate a1c(?: from average)?\s+(\d{1,3}|\d{1,2}\.\d+)$/i, :estimateA1c, command: true, help: {
                 'estimate a1c [from average] <glucose level>' => 'Estimates A1C based on average BG level'
@@ -88,7 +89,7 @@ module Lita
             def mgdlToIfcc(n)
                 return ((mgdlToDcct(n) - 2.15) * 10.929)
             end
-            
+
             def dcctToIfcc(n)
                 return (n.to_f - 2.15) * 10.929
             end
