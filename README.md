@@ -1,7 +1,5 @@
 # lita-diabetes
 
-[![Build Status](https://travis-ci.org/dosman711/lita-diabetes.svg)](https://travis-ci.org/dosman711/lita-diabetes)
-
 A plugin for diabetes-related plugins for lita
 
 ## Installation
@@ -10,7 +8,7 @@ A plugin for diabetes-related plugins for lita
 Add lita-diabetes to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-diabetes", :git => "https://github.com/dosman711/lita-diabetes.git"
+gem "lita-diabetes", :git => "https://github.com/reddit-diabetes/lita-diabetes.git"
 ```
 
 ## Configuration
