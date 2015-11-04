@@ -1,5 +1,7 @@
 # lita-diabetes
 
+[![Build Status](https://travis-ci.org/reddit-diabetes/lita-diabetes.svg)](https://travis-ci.org/reddit-diabetes/lita-diabetes)
+
 A plugin for diabetes-related plugins for lita
 
 ## Installation
