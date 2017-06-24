@@ -5,7 +5,7 @@ module Lita
     class Diabetes < Handler
       @@conversionRatio = 18.0182
 
-      route(/(?:^|_)(\d{1,3}|\d{1,2}\.\d+)(?:$|_)/, :convert, command: false, help:{
+      route(/(?:^(?=\d)|\b_(?=\d+(?:\.\d+)?+(?:_|\s*$))|\b(?=\d+(?:\.\d+)?\s*(?:mm|mg)))((?<!\d\.)\d{1,3}|\d{1,2}\.\d+)\s*(?:(mmol(?:\/l)?|\mg\/?dl)|(?<=\d)_|$)/i, :convert, command: false, help:{
         '<number>' => 'Convert glucose between mass/molar concentration units.',
         '_<number>_' => 'Convert glucose between mass/molar concentration units inline. E.g "I started at _125_ today"'
       })
@@ -20,8 +20,9 @@ module Lita
       def convert(response)
         if response.message.body.match(URI.regexp(["http", "https"])).nil?
           input = response.matches[0][0]
+          units = response.matches[0][1] || ''
           Lita.logger.debug('Converting BG for input "' + input + '"')
-          if input.index('.') == nil then
+          if input.index('.') == nil and /mmol(\/l)?/i.match(units) == nil then
             response.reply(input + ' mg/dL is ' + mgdlToMmol(input).to_s + ' mmol/L')
           else
             response.reply(input + ' mmol/L is ' + mmolToMgdl(input).to_s + ' mg/dL')
