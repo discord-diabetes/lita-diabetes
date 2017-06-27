@@ -84,4 +84,12 @@ describe Lita::Handlers::Diabetes, lita_handler: true do
     send_message('test message 5.0 mmol please ignore')
     expect(replies.last).to eq('5.0 mmol/L is 90 mg/dL')
   end
+  it 'converts mg/dl numbers with a decimal' do
+    send_message('test message 99.9 mg/dl please ignore')
+    expect(replies.last).to eq('99.9 mg/dL is 5.5 mmol/L')
+  end
+  it 'converts mmol/L numbers by themselves' do
+    send_message('45 mmol/L')
+    expect(replies.last).to eq('45 mmol/L is 811 mg/dL')
+  end
 end
